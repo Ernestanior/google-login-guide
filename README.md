@@ -2,25 +2,6 @@
 
  link for plugin: <a>https://github.com/react-native-google-signin/google-signin</a>
 
-Google sign-in is a great login feature to offer to your app's users. It makes it easier for them to create an account and sign in.
-
-And what's even better, Firebase makes it extremely easy for developers to add support for Google sign-in. But setting up the React Native environment can create some challenges, which are fully covered in this tutorial.
-
-React Native and Firebase SDK make the implementation of Google login pretty straightforward. Let's build a simple app that only has a single Google login button. Once the user successfully logs into Google, we are going to display the user info retrieved from their Google account as well as a logout button.
-
-You can also add Facebook Login to your app if you're interested in providing even more login options to your users. You can check out this guide to Facebook Login in React Native with Firebase if you're looking to learn more on how to set up Facebook sign-in.
-
-Why Use a Google Sign-in Button in Mobile Apps?
-Using Google or other third parties can make your authentication process seamless and friendly. Users don’t have to waste time in the registration process, which will improve your registration and retention rates tremendously.
-It's safe and secure.
-Users trust Google or Facebook more than an unknown site or app on the Internet.
-It provides a good user experience. As a user, we have little patience for any actions or work that we need to do, especially in a fairly unknown app that we are trying for the first time.
-Without further ado, let's jump directly into the app development part of this tutorial.
-
-Setting up the Firebase Project
-Go to the Firebase Console and create a Firebase project:
-
-create new firebase project
 create new firebase project
 Here, we will need to set up the Firebase project name and app identifier, so let's first create the React Native app.
 
@@ -41,6 +22,7 @@ GoogleSigninButton,
 statusCodes,
 } from 'react-native-google-signin';
 import google sign-in component
+
 Next, we need to create the states in order to handle the auth state and user info. For that we use the useState module as shown in the code snippet below:
 
 const [loggedIn, setloggedIn] = useState(false);

@@ -2,10 +2,10 @@
 
  link for plugin: <a>https://github.com/react-native-google-signin/google-signin</a>
 
-create new firebase project
+## Create new firebase project
 Here, we will need to set up the Firebase project name and app identifier, so let's first create the React Native app.
 
-Creating the React Native Project
+## Creating the React Native Project
 First, we need to create a React Native project by using the following command:
 
 react-native init instamobile-google-login-demo
@@ -120,7 +120,7 @@ As you can see, we have a "Sign in with Google" button that converts into a logo
 
 We are now going to set up the Google SignIn package and the Firebase app.
 
-Configuring the iOS and Android Native Projects
+## Configuring the iOS and Android Native Projects
 There are a few set up steps we need to take before the project is fully working. They are mostly related to the actual native side of the app.
 
 # For iOS
@@ -206,19 +206,24 @@ First, we need to create Firebase iOS app in order to obtain GoogleServiceinfo.p
 
 add new firebase app name
 Next, we copy the GoogleService-info.plist file to the Xcode project as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/bcb7e56a-30ec-423f-bc96-6febbd9be3c6)
 
 add google service plist to xcode
 Now, we need to add the reversed client ID present in the GoogleService-info.plist file to the URL Types, as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/56a267b7-e3b1-4f5b-a8c1-4dc792cbf7bc)
 
 get reverse client id from xcode
 Next step is to go to Info → URL Types then fill the URL Schemes as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/7f273e8f-e0ca-4b67-9b4a-53be40c6231f)
 
 add url scheme to xcode
 # For Android
 First, we need to create an Android app on Firebase. For that, we need a package name and certificate SHA-1 from our app. Then, we can register the Firebase app as shown below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/99441eea-e303-49ab-947a-f7deee86f721)
 
 create new android firebase app
 We can get the package name in MainApplication.java of our project as highlighted in the code snippet below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/9ddcce57-dc1e-425a-9d89-bda7a96711ad)
 
 find out bundle name in android app
 Next, we can get the SHA-1 key in the Keystore file. In the android/app directory, we can run the command:
@@ -226,13 +231,15 @@ Next, we can get the SHA-1 key in the Keystore file. In the android/app director
 cd android/app ; 
 keytool -exportcert -keystore debug.keystore -list -v
 generate sha-1
-Then, the SHA-1 key will appear, as shown in the screenshot below:
 
-generate sha1 for register android app in firebase
+
+Then, the SHA-1 key will appear, as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/cdc8f29e-4df6-4d70-a5b0-32713af38ec3)
+
 generate sha1 for register android app in firebase
 After successfully creating the Firebase setup app, we need to download the google-services.json file and copy it to the directory, as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/22090ede-543b-4d66-913a-aefccfdeebdf)
 
-add google service json to android app folder
 add google service json to android app folder
 Now, the final step is to set up a Google sign-in component in Android.
 
@@ -301,11 +308,13 @@ install cacao pod
 # For Android
 You can follow the instructions on the official document which is only required if you are using React Native <= 0.59 or need to manually integrate the library.
 
-Activating Google Sign-in on Firebase
+## Activating Google Sign-in on Firebase
 We need to go to the Firebase console. Then, in the Authentication section, we need to click on Google as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/1fd28010-3214-4f6c-a457-acfa5e27ed39)
 
 authentication method in firebase
 Next, we need to enable the setup with the following configuration and save the configuration as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/372b40f8-07f6-4ebd-bf6c-e0a323229c6a)
 
 activate project support email
 In App.js, we need to import auth from the Firebase package as shown in the code snippet below:
@@ -332,7 +341,8 @@ result of google login with react native
 We can see new data that is added to the Firebase Console:
 
 firebase authentication console
-Tracking User Status
+
+## Tracking User Status
 In order to check the user’s login status, we use Firebase Auth. For that, we need to add the onAuthStateChanged method to useEffect in order for it to run in every componentDidMount event call.
 
 Also, we need to pass a callback to the function named onAuthStateChanged as an argument as shown in the code snippet below:

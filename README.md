@@ -16,12 +16,14 @@ yarn add react-native-google-singin
 
 The react-native-google-signin package is used to implement Google auth functions in the React Native app. Now, we need to import the necessary modules and components from the respective package as shown in the code snippet below:
 
+<>
 import {
 GoogleSignin,
 GoogleSigninButton,
 statusCodes,
 } from 'react-native-google-signin';
 import google sign-in component
+</>
 
 Next, we need to create the states in order to handle the auth state and user info. For that we use the useState module as shown in the code snippet below:
 

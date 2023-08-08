@@ -123,12 +123,12 @@ We are now going to set up the Google SignIn package and the Firebase app.
 ## Configuring the iOS and Android Native Projects
 There are a few set up steps we need to take before the project is fully working. They are mostly related to the actual native side of the app.
 
-# For iOS
+### For iOS
 Here, in VSCode (or any Terminal)  just run cd ios && pod install. Then open the .xcworkspace file in Xcode (from the ios folder) and make sure the Pods are included:
 
 install google login lib in xcode
 install google login lib in xcode
-# For Android
+### For Android
 1. First, we need to link the native module.
 
 In RN >= 0.60 you should not need to do anything thanks to auto-linking.
@@ -198,7 +198,7 @@ public class MainApplication extends Application implements ReactApplication {
 }
 setup google login for android in MainApplication.java
 ## Setting up Firebase
-# For iOS
+### For iOS
 Now, we need to get started on the Firebase configuration. In Firebase, we need to set up a Google cloud app. But when we set up the authentication method on Firebase this also creates an Google cloud app.
 
 First, we need to create Firebase iOS app in order to obtain GoogleServiceinfo.plist as shown in the screenshot below:
@@ -217,7 +217,7 @@ Next step is to go to Info → URL Types then fill the URL Schemes as shown in t
 ![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/7f273e8f-e0ca-4b67-9b4a-53be40c6231f)
 
 add url scheme to xcode
-# For Android
+### For Android
 First, we need to create an Android app on Firebase. For that, we need a package name and certificate SHA-1 from our app. Then, we can register the Firebase app as shown below:
 ![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/99441eea-e303-49ab-947a-f7deee86f721)
 
@@ -246,14 +246,14 @@ Now, the final step is to set up a Google sign-in component in Android.
 Installing the React Native Firebase Package
 In order to install react-native-firebase package version 6, we need to run the following command in our project command prompt:
 
-# Using npm 
+#### Using npm 
 npm install --save @react-native-firebase/app 
-# Using Yarn 
+#### Using Yarn 
 yarn add @react-native-firebase/app
 install react native firebase core component
 The @react-native-firebase/app module must be installed before using any other Firebase service.
 
-# For iOS
+### For iOS
 We already have GoogleService-Info.plist added to Xcode. What is left is to allow Firebase on iOS to use the credentials. The Firebase iOS SDK must be configured during the bootstrap phase of your application.
 
 To do this, we need to open our /ios/{projectName}/AppDelegate.m file, and add the following:
@@ -279,7 +279,7 @@ cd ios ; pod install
 CocoaPods install
 That's it. Now we have completed the installation of the main Firebase package on iOS
 
-# For Android
+### For Android
 We need to configure Firebase with Android credentials. To allow Firebase on Android to use the credentials, the google-services plugin must be enabled on the project. This requires modification to two files in the Android directory.
 
 First, add the google-services plugin as a dependency inside your android/build.gradle file:
@@ -300,12 +300,12 @@ After the installation completes, we need to set up the parent Firebase package.
 
 yarn add @react-native-firebase/auth
 install react native firebase auth 
-# For iOS
+### For iOS
 We just need to install the pods again in the command prompt:
 
 cd ios/ && pod install
 install cacao pod
-# For Android
+### For Android
 You can follow the instructions on the official document which is only required if you are using React Native <= 0.59 or need to manually integrate the library.
 
 ## Activating Google Sign-in on Firebase

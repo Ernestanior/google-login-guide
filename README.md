@@ -16,20 +16,19 @@ yarn add react-native-google-singin
 
 The react-native-google-signin package is used to implement Google auth functions in the React Native app. Now, we need to import the necessary modules and components from the respective package as shown in the code snippet below:
 
-<>
 import {
 GoogleSignin,
 GoogleSigninButton,
 statusCodes,
 } from 'react-native-google-signin';
 import google sign-in component
-</>
 
 Next, we need to create the states in order to handle the auth state and user info. For that we use the useState module as shown in the code snippet below:
 
 const [loggedIn, setloggedIn] = useState(false);
 const [userInfo, setuserInfo] = useState([]);
 add state
+
 Now, we need to create a sign-in function to handle authentication as shown in the code snippet below:
 
 _signIn = async () => {
@@ -198,11 +197,12 @@ public class MainApplication extends Application implements ReactApplication {
 
 }
 setup google login for android in MainApplication.java
-Setting up Firebase
+## Setting up Firebase
 # For iOS
 Now, we need to get started on the Firebase configuration. In Firebase, we need to set up a Google cloud app. But when we set up the authentication method on Firebase this also creates an Google cloud app.
 
 First, we need to create Firebase iOS app in order to obtain GoogleServiceinfo.plist as shown in the screenshot below:
+![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/4811dc83-9ac7-4d76-ac6d-f72136ebc284)
 
 add new firebase app name
 Next, we copy the GoogleService-info.plist file to the Xcode project as shown in the screenshot below:

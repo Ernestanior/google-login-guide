@@ -226,15 +226,13 @@ We can get the package name in MainApplication.java of our project as highlighte
 ![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/9ddcce57-dc1e-425a-9d89-bda7a96711ad)
 
 find out bundle name in android app
-Next, we can get the SHA-1 key in the Keystore file. In the android/app directory, we can run the command:
+Next, we can get the SHA-1 key in the Keystore file. In the android/app directory, we can run the command according to: https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate
 
-cd android/app ; 
-keytool -exportcert -keystore debug.keystore -list -v
-generate sha-1
-
+cd android/app ; keytool -list -v -keystore {keystore_name} -alias {alias_name}
 
 Then, the SHA-1 key will appear, as shown in the screenshot below:
-![image](https://github.com/Ernestanior/google-login-guide/assets/36638557/cdc8f29e-4df6-4d70-a5b0-32713af38ec3)
+<img width="833" alt="image" src="https://github.com/Ernestanior/google-login-guide/assets/36638557/cc92441d-10a8-48d3-8c7e-b6e94c571ce9">
+
 
 generate sha1 for register android app in firebase
 After successfully creating the Firebase setup app, we need to download the google-services.json file and copy it to the directory, as shown in the screenshot below:
